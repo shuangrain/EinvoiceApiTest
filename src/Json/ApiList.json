@@ -1,15 +1,124 @@
 ﻿[
   {
     "TypeName": "電子發票行動支付應用",
+    "ApiName": "手機條碼註冊",
+    "ApiUrl": "https://api.einvoice.nat.gov.tw/PB2CAPIVAN/appCarreg/AppCarReg",
+    "Param": {
+      "action": "generalCarrierReg",
+      "appID": null,
+      "email": "abc@gmail.com",
+      "isVerification": "Y",
+      "phoneNo": "0912345678",
+      "serial": "1234567890",
+      "timeStamp": null,
+      "uuid": null,
+      "version": "1.0"
+    }
+  },
+  {
+    "TypeName": "電子發票行動支付應用",
+    "ApiName": "手機條碼綁定金融帳戶或電子支付帳戶",
+    "ApiUrl": "https://api.einvoice.nat.gov.tw/PB2CAPIVAN/PublicCarrier/AppBankInfo",
+    "Param": {
+      "accountNo": "123456789012",
+      "action": "generalCarrierBank",
+      "appID": null,
+      "bankNo": "001",
+      "cardEncrypt": "1234",
+      "cardNo": "/AB56P5Q",
+      "cardType": "3J0002",
+      "enableRemit": "Y",
+      "expTimeStamp": null,
+      "rocID": "A123456789",
+      "serial": "1234567890",
+      "timeStamp": null,
+      "updateAcc": "Y",
+      "userIdType": "1",
+      "uuid": null,
+      "version": "1.0",
+      "winnerName": "王大明",
+      "winnerPhone": "0912345678"
+    }
+  },
+  {
+    "TypeName": "電子發票行動支付應用",
     "ApiName": "查詢手機條碼",
     "ApiUrl": "https://api.einvoice.nat.gov.tw/PB2CAPIVAN/Carrier/AppGetBarcode",
     "Param": {
       "action": "getBarcode",
-      "appID": "",
+      "appID": null,
       "phoneNo": "0912345678",
       "timeStamp": null,
       "uuid": null,
       "verificationCode": "1234",
+      "version": "1.0"
+    }
+  },
+  {
+    "TypeName": "電子發票行動支付應用",
+    "ApiName": "手機條碼及驗證碼註冊",
+    "ApiUrl": "https://api.einvoice.nat.gov.tw/PB2CAPIVAN/MobBarCar/PubCarVerReg",
+    "Param": {
+      "action": "pubCarVerReg",
+      "appID": null,
+      "email": "abc@gmail.com",
+      "phoneNo": "0912345678",
+      "isVerification": "Y",
+      "serial": "1234567890",
+      "timeStamp": null,
+      "uuid": null,
+      "verify": "zxcv1234",
+      "version": "1.0"
+    }
+  },
+  {
+    "TypeName": "電子發票行動支付應用",
+    "ApiName": "變更手機條碼驗證碼",
+    "ApiUrl": "https://api.einvoice.nat.gov.tw/PB2CAPIVAN/MobBarCar/ChangeVer",
+    "Param": {
+      "action": "changeVer",
+      "appID": null,
+      "cardNo": "/AB56P5Q",
+      "newVerify": "zxcv2222",
+      "oldVerify": "zxcv1111",
+      "serial": "1234567890",
+      "timeStamp": null,
+      "uuid": null,
+      "version": "1.0"
+    }
+  },
+  {
+    "TypeName": "電子發票行動支付應用",
+    "ApiName": "忘記手機條碼驗證碼",
+    "ApiUrl": "https://api.einvoice.nat.gov.tw/PB2CAPIVAN/MobBarCar/ForgetVer",
+    "Param": {
+      "action": "forgetVer",
+      "appID": null,
+      "email": "abc@gmail.com",
+      "phoneNo": "0912345678",
+      "serial": "1234567890",
+      "timeStamp": null,
+      "uuid": null,
+      "version": "1.0"
+    }
+  },
+  {
+    "TypeName": "電子發票行動支付應用",
+    "ApiName": "載具歸戶手機條碼",
+    "ApiUrl": "https://api.einvoice.nat.gov.tw/PB2CAPIVAN/MobBarCar/CarrierAction",
+    "Param": {
+      "action": "carrierAction",
+      "appID": null,
+      "cardType": "1K0001",
+      "cardNo": "/AB56P5Q",
+      "verifyCode": "zxcv1111",
+      "carrierName": "",
+      "publicCardType": "3J0002",
+      "publicCardNo": "/AB56P5Q",
+      "publicVerifyCode": "zxcv1234",
+      "serial": "1234567890",
+      "timeStamp": null,
+      "uuid": null,
       "version": "1.0"
     }
   }

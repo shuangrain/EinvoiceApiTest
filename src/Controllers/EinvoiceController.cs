@@ -38,6 +38,7 @@ namespace EinvoiceApiTest.Controllers
             string appID = _configuration.GetValue<string>("AppID");
 
             string timestamp = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0)).TotalMilliseconds.ToString("0");
+            string expTimeStamp = (DateTime.UtcNow.AddMinutes(1) - new DateTime(1970, 1, 1, 0, 0, 0)).TotalMilliseconds.ToString("0");
             string uuid = Guid.NewGuid().ToString().Replace("-", "");
 
             for (int i = 0; i < models.Count; i++)
@@ -50,6 +51,11 @@ namespace EinvoiceApiTest.Controllers
                     if (formData.Keys.Contains("timeStamp"))
                     {
                         formData["timeStamp"] = timestamp;
+                    }
+
+                    if (formData.Keys.Contains("expTimeStamp"))
+                    {
+                        formData["expTimeStamp"] = expTimeStamp;
                     }
 
                     if (formData.Keys.Contains("uuid"))

@@ -4,8 +4,17 @@
     <form #apiForm="ngForm" (ngSubmit)="callApi(apiForm)">
 
         <div class="form-group">
+            <label class="col-form-label">Api 版本</label>
+            <p>
+                電子發票行動支付應用API規格 v1.4
+            </p>
+        </div>
+
+        <div class="form-group">
             <label class="col-form-label">環境設定</label>
             <div>
+                <button type="submit" class="btn btn-primary float-right">送出</button>
+
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
                         <input class="form-check-input" type="checkbox" id="isNeedSignature" name="isNeedSignature" [(ngModel)]="isNeedSignature"> 簽章
@@ -21,8 +30,6 @@
                         <input class="form-check-input" type="checkbox" id="isClientMode" name="isClientMode" [(ngModel)]="isClientMode"> Client 模式
                     </label>
                 </div>
-
-                <button type="submit" class="btn btn-primary float-right">送出</button>
             </div>
         </div>
 
