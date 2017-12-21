@@ -1,0 +1,59 @@
+﻿<h1>EinvoiceApiTest</h1>
+
+<div>
+    <form #apiForm="ngForm" (ngSubmit)="callApi(apiForm)">
+
+        <div class="form-group">
+            <label class="col-form-label">環境設定</label>
+            <div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="isNeedSignature" name="isNeedSignature" [(ngModel)]="isNeedSignature"> 簽章
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="isTestMode" name="isTestMode" [(ngModel)]="isTestMode"> 測試環境
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="isClientMode" name="isClientMode" [(ngModel)]="isClientMode"> Client 模式
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary float-right">送出</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-form-label" for="selectApi">選擇 Api</label>
+            <select class="form-control" id="selectApi" (change)="changeApi($event.target.value)">
+                <option *ngFor="let item of apiList" [value]="item.id">
+                    {{ item.typeName + ' - ' + item.apiName}}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="col-form-label" for="apiKey">財政部加密用 Key</label>
+            <input type="text" class="form-control" id="apiKey" name="apiKey" [(ngModel)]="apiKey" />
+        </div>
+
+        <div class="form-group">
+            <label class="col-form-label" for="apiUrl">Api 位置</label>
+            <input type="text" class="form-control" id="apiUrl" name="apiUrl" [(ngModel)]="apiUrl" />
+        </div>
+
+        <div class="form-group">
+            <label class="col-form-label" for="apiRequest">Request</label>
+            <textarea class="form-control" style="width:100%;height:300px" id="apiRequest" name="apiRequest" [(ngModel)]="apiRequest"></textarea>
+        </div>
+
+        <div *ngIf="!isClientMode" class="form-group">
+            <label class="col-form-label" for="apiResponse">Response</label>
+            <textarea class="form-control" style="width:100%;height:300px" id="apiResponse" name="apiResponse" [(ngModel)]="apiResponse"></textarea>
+        </div>
+
+    </form>
+</div>

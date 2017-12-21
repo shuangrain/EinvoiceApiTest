@@ -1,0 +1,16 @@
+﻿[
+  {
+    "TypeName": "電子發票行動支付應用",
+    "ApiName": "查詢手機條碼",
+    "ApiUrl": "https://api.einvoice.nat.gov.tw/PB2CAPIVAN/Carrier/AppGetBarcode",
+    "Param": {
+      "action": "getBarcode",
+      "appID": "",
+      "phoneNo": "0912345678",
+      "timeStamp": null,
+      "uuid": null,
+      "verificationCode": "1234",
+      "version": "1.0"
+    }
+  }
+]
