@@ -7,12 +7,13 @@
 * 後端：ASP.NET NetCore 2.0 - ASP.NET Web Api
 * Live Demo：[https://exfast.me/einvoiceApiTest](https://exfast.me/einvoiceApiTest)
 * SourceCode：[https://github.com/shuangrain/EinvoiceApiTest](https://github.com/shuangrain/EinvoiceApiTest)
+* Blog：[https://blog.exfast.me/2017/12/sideproject-ministry-of-finance-e-invoicing-api-testing-tools/](https://blog.exfast.me/2017/12/sideproject-ministry-of-finance-e-invoicing-api-testing-tools/)
 
 ## 操作說明
 
 * 環境變數
 
-  1. 簽章 (Signature)：將 Request 參數按照名稱排序並以 HMAC-SHA1 加密後加在 Query 後方傳送至財政部
+	1. 簽章 (Signature)：將 Request 參數按照名稱排序並以 HMAC-SHA1 加密後加在 Query 後方傳送至財政部
 	2. 測試環境：將資料傳送至[財政部測試環境](https://wwwtest.einvoice.nat.gov.tw/)
 	3. Client 模式：以另開新頁的方式呼叫財政部 API
 
